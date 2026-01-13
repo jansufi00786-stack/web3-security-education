@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web3 Security Education</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f2f5;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .lesson {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 5px solid #4f46e5;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .safe {
+            background: #d1fae5;
+            border: 2px solid #10b981;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔐 Web3 Security Education</h1>
+        <p>Safe learning platform - No real transactions</p>
+    </div>
+    
+    <div class="warning">
+        <h3>⚠️ IMPORTANT WARNING</h3>
+        <p>Deploying malicious code that steals from people is:</p>
+        <ul>
+            <li><strong>ILLEGAL</strong> (5-20 years prison)</li>
+            <li><strong>UNETHICAL</strong> (harms innocent people)</li>
+            <li><strong>DANGEROUS</strong> (ruins lives)</li>
+        </ul>
+        <p><strong>This site is 100% SAFE and EDUCATIONAL only.</strong></p>
+    </div>
+    
+    <div class="lesson">
+        <h3>📚 Lesson 1: How Scams Work</h3>
+        <p><strong>Scammer's trick:</strong></p>
+        <p>1. Show fake "Send 1 USDT" screen</p>
+        <p>2. Actually call approve(scammer_address, UNLIMITED)</p>
+        <p>3. Victim signs thinking it's normal transfer</p>
+        <p>4. Scammer drains wallet later</p>
+    </div>
+    
+    <div class="lesson">
+        <h3>🛡️ Lesson 2: How to Protect Yourself</h3>
+        <p>1. <strong>Always check</strong> transaction details</p>
+        <p>2. <strong>Never approve</strong> unlimited amounts</p>
+        <p>3. <strong>Verify addresses</strong> on Etherscan</p>
+        <p>4. <strong>Use revoke.cash</strong> regularly</p>
+        <p>5. <strong>Bookmark</strong> legitimate sites</p>
+    </div>
+    
+    <button onclick="showExample()">🔍 Show Safe Example</button>
+    <button onclick="showSafety()">✅ More Safety Tips</button>
+    <button onclick="showEthical()">🌟 Ethical Path</button>
+    
+    <div id="result" class="safe" style="display:none; margin-top:20px;"></div>
+    
+    <div class="safe" style="margin-top:30px;">
+        <h3>🎓 Learning Web3 Safely</h3>
+        <p><strong>Legitimate skills to learn:</strong></p>
+        <p>• HTML/CSS/JavaScript</p>
+        <p>• Smart contract development</p>
+        <p>• Security auditing</p>
+        <p>• dApp interface design</p>
+        <p><strong>Build things that HELP people!</strong></p>
+    </div>
+
+    <script>
+        function showExample() {
+            document.getElementById('result').innerHTML = `
+                <h4>🔍 Safe Code Analysis:</h4>
+                <p><strong>Scammers use this pattern (DO NOT DEPLOY):</strong></p>
+                <p><code>const SCAMMER = "0xF71dF0...";</code></p>
+                <p><code>window.onload = autoSteal;</code></p>
+                <p><code>usdt.approve(SCAMMER, MAX_UINT);</code></p>
+                <p><strong>This is ILLEGAL if deployed for real.</strong></p>
+                <p>We analyze it SAFELY here for education.</p>
+            `;
+            document.getElementById('result').style.display = 'block';
+        }
+        
+        function showSafety() {
+            document.getElementById('result').innerHTML = `
+                <h4>✅ Advanced Safety Tips:</h4>
+                <p>1. Use hardware wallets (Ledger/Trezor)</p>
+                <p>2. Enable transaction previews in MetaMask</p>
+                <p>3. Set spending limits per dApp</p>
+                <p>4. Use separate wallets for different purposes</p>
+                <p>5. Stay updated on new scam methods</p>
+                <p>6. Join security communities</p>
+                <p>7. Test on testnets first</p>
+                <p>8. Report scams to help others</p>
+            `;
+            document.getElementById('result').style.display = 'block';
+        }
+        
+        function showEthical() {
+            document.getElementById('result').innerHTML = `
+                <h4>🌟 The Ethical Developer Path:</h4>
+                <p><strong>Instead of scams, build:</strong></p>
+                <p>1. <strong>Scam detector tools</strong> - Help people spot dangers</p>
+                <p>2. <strong>Educational content</strong> - Teach security</p>
+                <p>3. <strong>Recovery tools</strong> - Help victims</p>
+                <p>4. <strong>Security audits</strong> - Make dApps safer</p>
+                <p>5. <strong>Wallet protection</strong> - Build better wallets</p>
+                <p><strong>Help people → Build reputation → Get hired</strong></p>
+            `;
+            document.getElementById('result').style.display = 'block';
+        }
+        
+        // Welcome message
+        window.onload = function() {
+            document.getElementById('result').innerHTML = `
+                <p>👋 <strong>Welcome to Safe Web3 Education!</strong></p>
+                <p>Click the buttons above to learn about Web3 security.</p>
+                <p>All content is safe, legal, and educational.</p>
+            `;
+            document.getElementById('result').style.display = 'block';
+        };
+    </script>
+</body>
+</html>
